@@ -16,7 +16,6 @@ import asyncio
 from pubsub import pub
 from meshtastic.ble_interface import BLEInterface, BLEClient
 
-
 def custom_find_device(address):
     """
     Scans for available BLE devices without service filtering and attempts a
@@ -123,7 +122,7 @@ def onReceive(packet=None, interface=None):
     Side Effects:
         - If the packet contains a text message (under 'decoded.text'), it
           prints the sender ID and the message to standard output.
-        - Prints a prompt ("Enter message: ") to indicate that further user
+        - Prints a prompt ("Ch0> ") to indicate that further user
           input can be entered.
 
     Returns:
@@ -138,7 +137,7 @@ def onReceive(packet=None, interface=None):
         sender = packet.get("fromId", "unknown")
         message = decoded["text"]
         print(f"\n{sender}: {message}")
-        print("me: ", end="", flush=True)
+        print("Ch0> ", end="", flush=True)
 
 
 async def main():
@@ -159,8 +158,8 @@ async def main():
         print("Error initializing BLE interface:", e)
         sys.exit(1)
     
-    print("BLE Interactive Meshtastic Chat Client")
-    print("--------------------------------------")
+    print("BLE Interactive Meshtastic Chat Client 0.1.0")
+    print("--------------------------------------------")
     print("Type your message and press Enter to send.") 
     print("Press Ctrl+C to exit...")
     print("")
@@ -169,7 +168,7 @@ async def main():
     try:
         while True:
             # non-blocking input
-            msg = await loop.run_in_executor(None, input, "me: ")
+            msg = await loop.run_in_executor(None, input, "Ch0> ")
             if msg:
                 ble_iface.sendText(msg, channelIndex=0)
                 await asyncio.sleep(0.1)
