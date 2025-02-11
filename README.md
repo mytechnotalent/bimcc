@@ -34,6 +34,7 @@ import asyncio
 from pubsub import pub
 from meshtastic.ble_interface import BLEInterface, BLEClient
 
+
 def custom_find_device(address):
     """
     Scans for available BLE devices without service filtering and attempts a
