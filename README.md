@@ -12,7 +12,7 @@ BLE Interactive Meshtastic Chat Client which chats on the Primary Channel.
 ### STEP 1: `python3 -m venv venv`
 ### STEP 2: `source venv/bin/activate`
 ### STEP 3: `pip install -r requirements.txt`
-### STEP 4: `meshtastic --ble-scan
+### STEP 4: `meshtastic --ble-scan`
 ### STEP 5: `./bimcc.py <BLE_DEVICE_ADDRESS>`
 
 ### SOURCE
