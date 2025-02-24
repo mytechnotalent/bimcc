@@ -12,7 +12,8 @@ Interactive Meshtastic Chat Client which chats on the Primary Channel over BLE.
 ### STEP 1: `python3 -m venv venv`
 ### STEP 2: `source venv/bin/activate`
 ### STEP 3: `pip install -r requirements.txt`
-### STEP 4: `./bimcc.py "<BLE_DEVICE_ADDRESS>"`
+### STEP 4: `meshtastic --ble-scan
+### STEP 5: `./bimcc.py <BLE_DEVICE_ADDRESS>`
 
 ### SOURCE
 ```python
@@ -22,7 +23,7 @@ Interactive Meshtastic Chat Client which chats on the Primary Channel over BLE.
 BLE Interactive Meshtastic Chat Client 0.1.0
 
 Usage:
-    python bimcc.py "<BLE_DEVICE_ADDRESS>"
+    python bimcc.py <BLE_DEVICE_ADDRESS>
 
 This script sends and receives text messages over the BLE interface.
 It uses PyPubSub to subscribe to text messages.
