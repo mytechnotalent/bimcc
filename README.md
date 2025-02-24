@@ -5,7 +5,7 @@
 <br><br>
 
 # BLE Interactive Meshtastic Chat Client
-Interactive Meshtastic Chat Client which chats on the Primary Channel over BLE.
+BLE Interactive Meshtastic Chat Client which chats on the Primary Channel.
 
 <br><br>
 
